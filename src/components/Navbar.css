@@ -21,3 +21,7 @@ a:hover{
     border-radius: 10px;
     background-color: #131312b7;
 }
+.carrito{
+    display: flex;
+    justify-content: flex-start;
+}
