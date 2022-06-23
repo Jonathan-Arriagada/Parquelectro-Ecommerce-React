@@ -1,23 +1,27 @@
 import "./ItemCount.css";
 import { useState } from "react";
 
-function ItemCount() {
-    const [num, setNum] = useState(0);
+function ItemCount(props) {
+    const [num, setNum] = useState(props.initial);
     
     const sumar = () => {
-        setNum(num + 1)
+        if(num<props.stock){
+        setNum(num + 1)}
     }
 
     const restar = () => {
-        if(num>0) {
+        if(num>props.initial) {
             setNum(num - 1)}
     }
-    
+    const agregar = () => { console.log("Agregado al carrito") }
     return (
         <>
-            <p>{num}</p>
-            <button onClick = {sumar}>+</button>
-            <button onClick = {restar}>-</button>
+            <h1>Producto</h1>
+            <p>Cantidad: {num}</p>
+            <button onClick={sumar}>+</button>    
+            <button onClick={restar}>-</button>
+            <br/>
+            <button onClick={agregar}>Agregar al carrito</button>
         </>
     );
   }
