@@ -1,10 +1,10 @@
 import './ItemListContainer.css';
 
-function ItemListContainer() {
+function ItemListContainer(props) {
     return (
       <div className="">
-         <h1>Lista de productos:</h1>
-         <p>¡ Aqui encontraras los mejores productos de electronica con los precios mas bajos !</p>
+         <h1>{props.titulo}</h1>
+         <h2>{props.subtitulo}</h2>
       </div>
     );
   }

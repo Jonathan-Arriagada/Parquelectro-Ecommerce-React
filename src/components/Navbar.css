@@ -1,9 +1,15 @@
-ul{
-    list-style: none;
+nav{
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     background-color: rgba(5, 2, 138, 0.89);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 a{
     text-decoration: none;
@@ -11,7 +17,6 @@ a{
 }
 a:hover{
     background-color: grey;
-    width: fit-content;
 }
 .botones {
     margin: 5px;
@@ -22,6 +27,5 @@ a:hover{
     background-color: #131312b7;
 }
 .carrito{
-    display: flex;
-    justify-content: flex-start;
+    align-self: center;
 }
