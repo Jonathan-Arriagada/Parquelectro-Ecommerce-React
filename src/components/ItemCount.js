@@ -16,7 +16,6 @@ function ItemCount(props) {
     const agregar = () => { console.log("Agregado al carrito") }
     return (
         <>
-            <h1>Producto</h1>
             <p>Cantidad: {num}</p>
             <button onClick={sumar}>+</button>    
             <button onClick={restar}>-</button>

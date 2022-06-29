@@ -1,0 +1,8 @@
+.card{
+    display:inline-table;
+    height: auto;
+    width: 250px;
+    background-color: bisque;
+    margin: 5px;
+
+}
