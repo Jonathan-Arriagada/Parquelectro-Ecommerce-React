@@ -10,7 +10,7 @@ const [product, setProduct] = useState([])
     fetch('data.json')  
     .then((resp) => resp.json())  
     .then((data) => setProduct(data[0]))
-    }, 2000)
+    }, 500)
     console.log(product)
   }, [] ) ;
 

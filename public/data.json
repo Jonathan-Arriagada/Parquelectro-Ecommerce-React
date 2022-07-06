@@ -4,27 +4,31 @@
         "stock":10,
         "precio":2000,
         "id":1,
-        "img":"./cargador.png"
+        "img":"./cargador.png",
+        "category":"Celulares"
     },
     {
         "nombre":"Auriculares", 
         "stock":10,
         "precio":3000,
         "id":2,
-        "img":"./auriculares.png"
+        "img":"./auriculares.png",
+        "category":"PC"
     },  
     {
         "nombre":"Samsung S21", 
         "stock":10,
         "precio":120000,
         "id":3,
-        "img":"./celular.png"
+        "img":"./celular.png",
+        "category":"Celulares"
     },
     {
         "nombre":"Joystick PS5", 
         "stock":10,
         "precio":12000,
         "id":4,
-        "img":"./joystick.png"
+        "img":"./joystick.png",
+        "category":"Consolas"
     }
 ]

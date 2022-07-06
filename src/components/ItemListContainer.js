@@ -1,19 +1,21 @@
 import './ItemListContainer.css';
 import ItemList  from './ItemList';
 import { useState,useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer () {
 
-const [info, setInfo] = useState([])
+const [info, setInfo] = useState([]);
+const { categoryid } = useParams ();
 
   useEffect( () => {
     setTimeout( () =>{
     fetch('data.json')  
     .then((resp) => resp.json())  
     .then((data) => setInfo(data))
-    }, 2000)
+    }, 500)
     console.log(info)
-  }, [] ) ;
+  }, [categoryid] ) ;
 
 
 
