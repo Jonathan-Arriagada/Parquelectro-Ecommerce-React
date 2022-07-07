@@ -12,8 +12,12 @@ const { categoryid } = useParams ();
     setTimeout( () =>{
     fetch('data.json')  
     .then((resp) => resp.json())  
-    .then((data) => setInfo(data))
-    }, 500)
+    .then((data) => {
+      let itemFind = data.find( (ítem) => ítem.id === producto.id)
+     setInfo(itemFind)
+    })
+    .then((data) => setInfo(data))}
+    , 500)
     console.log(info)
   }, [categoryid] ) ;
 
