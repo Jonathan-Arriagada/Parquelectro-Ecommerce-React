@@ -10,16 +10,16 @@ const { categoryid } = useParams ();
 
   useEffect( () => {
     setTimeout( () =>{
-    fetch('data.json')  
+    fetch('/data.json')  
     .then((resp) => resp.json())  
     .then((data) => {
-      let itemFind = data.find( (ítem) => ítem.id === producto.id)
-     setInfo(itemFind)
-    })
-    .then((data) => setInfo(data))}
+      let itemFind = data.filter( (item)=> item.category === categoryid ) 
+      setInfo(itemFind)
+     })
+    // .then((data) => setInfo(data))
+  }
     , 500)
-    console.log(info)
-  }, [categoryid] ) ;
+   }, [categoryid] ) ;
 
 
 

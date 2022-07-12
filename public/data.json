@@ -3,32 +3,32 @@
         "nombre":"Cargador Wire", 
         "stock":10,
         "precio":2000,
-        "id":1,
-        "img":"./cargador.png",
+        "id":0,
+        "img":"/cargador.png",
         "category":"Celulares"
     },
     {
         "nombre":"Auriculares", 
         "stock":10,
         "precio":3000,
-        "id":2,
-        "img":"./auriculares.png",
+        "id":1,
+        "img":"/auriculares.png",
         "category":"PC"
     },  
     {
         "nombre":"Samsung S21", 
         "stock":10,
         "precio":120000,
-        "id":3,
-        "img":"./celular.png",
+        "id":2,
+        "img":"/celular.png",
         "category":"Celulares"
     },
     {
         "nombre":"Joystick PS5", 
         "stock":10,
         "precio":12000,
-        "id":4,
-        "img":"./joystick.png",
+        "id":3,
+        "img":"/joystick.png",
         "category":"Consolas"
     }
 ]

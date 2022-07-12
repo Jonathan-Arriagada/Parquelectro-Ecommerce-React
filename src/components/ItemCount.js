@@ -13,14 +13,14 @@ function ItemCount(props) {
         if(num>props.initial) {
             setNum(num - 1)}
     }
-    const agregar = () => { console.log("Agregado al carrito") }
+
     return (
         <>
             <p>Cantidad: {num}</p>
-            <button onClick={sumar}>+</button>    
-            <button onClick={restar}>-</button>
+            <button className="btn btn-outline-secondary border-2" onClick={sumar}>+</button>    
+            <button className="btn btn-outline-secondary border-2" onClick={restar}>-</button>
             <br/>
-            <button onClick={agregar}>Agregar al carrito</button>
+            <button className="btn btn-outline-secondary border-2" onClick={() => props.onAdd(num)}>Agregar al carrito</button>
         </>
     );
   }
