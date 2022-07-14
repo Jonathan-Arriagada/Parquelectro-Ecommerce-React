@@ -13,10 +13,13 @@ const { categoryid } = useParams ();
     fetch('/data.json')  
     .then((resp) => resp.json())  
     .then((data) => {
+      if (categoryid === undefined){
+        setInfo(data);
+      }else {
       let itemFind = data.filter( (item)=> item.category === categoryid ) 
       setInfo(itemFind)
+      }
      })
-    // .then((data) => setInfo(data))
   }
     , 500)
    }, [categoryid] ) ;
