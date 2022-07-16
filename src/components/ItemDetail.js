@@ -11,6 +11,9 @@ const { addToCart } = useCartContext();
     setIsInCart(true);
     addToCart(product, num);
   }  
+  if (!product){
+    return  <h4>Cargando . . .</h4>
+  }
   
   return (
  

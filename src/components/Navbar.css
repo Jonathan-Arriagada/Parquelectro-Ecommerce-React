@@ -1,5 +1,4 @@
 nav{
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -23,6 +22,7 @@ a:hover{
     border: solid 2px white;
     padding: 5px;
     width: fit-content;
+    height: fit-content;
     border-radius: 10px;
     background-color: #131312b7;
 }
