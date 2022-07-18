@@ -16,10 +16,8 @@ const { addToCart } = useCartContext();
   }
   
   return (
- 
-    <div className="container">
+   <div className="container">
     <div className="card text-center bg-dark">    
-
       <div className="card-body text-light">
       <img src={product.img} className="card-img-top" width="100" height="125"/>
       <h3 className="card-title">{product.nombre}</h3>         
@@ -29,11 +27,9 @@ const { addToCart } = useCartContext();
             :
               <ItemCount onAdd={onAdd}  stock={product.stock} initial={1}/>
           }
-        </div>  
-        </div>
-   
+      </div>  
+    </div>
    </div>  
-
     )
   }
 

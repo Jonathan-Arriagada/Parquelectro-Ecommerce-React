@@ -2,6 +2,7 @@ import './ItemListContainer.css';
 import ItemList  from './ItemList';
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getAllProds } from "../services/firestore";
 
 function ItemListContainer () {
 
@@ -10,9 +11,7 @@ const { categoryid } = useParams ();
 
   useEffect( () => {
     setTimeout( () =>{
-    fetch('/data.json')  
-    .then((resp) => resp.json())  
-    .then((data) => {
+      getAllProds().then((data) => {
       if (categoryid === undefined){
         setInfo(data);
       }else {

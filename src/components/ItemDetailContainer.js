@@ -1,20 +1,19 @@
 import ItemDetail from './ItemDetail';
 import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getProd } from '../services/firestore';
 
 function ItemDetailContainer () {
 
 const [product, setProduct] = useState()
-const { itemid } = useParams ();
+const { id } = useParams ();
 
   useEffect( () => {
     setTimeout( () =>{
-    fetch('/data.json')  
-    .then((resp) => resp.json()) 
-    .then((data) => {     
-      setProduct(data[itemid])}) 
+      getProd(id).then((data) => {     
+      setProduct(data[id])}) 
   }, 500)
-  }, [itemid] ) ;
+  }, [id] ) ;
 
   return (
     <div>
