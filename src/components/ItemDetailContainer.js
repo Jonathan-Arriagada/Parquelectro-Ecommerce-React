@@ -6,17 +6,17 @@ import { getProd } from '../services/firestore';
 function ItemDetailContainer () {
 
 const [product, setProduct] = useState()
-const { id } = useParams ();
+const { itemid } = useParams ();
 
   useEffect( () => {
     setTimeout( () =>{
-      getProd(id).then((data) => {     
-      setProduct(data[id])}) 
+      getProd(itemid).then((data) => {     
+      setProduct(data)}) 
   }, 500)
-  }, [id] ) ;
+  }, [itemid] ) ;
 
   return (
-    <div>
+    <div> 
      <ItemDetail product={product}/>
     </div>
     

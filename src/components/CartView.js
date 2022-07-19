@@ -7,7 +7,7 @@ function CartView() {
 
 if (cart.length === 0){
     return(<>
-        <h4>Carrito vacio.</h4>
+        <h4 className="text-light">Carrito vacio.</h4>
         <Link to="/"><button className="btn btn-outline-secondary border-2">Ir al Inicio</button></Link>
         </>
     )
