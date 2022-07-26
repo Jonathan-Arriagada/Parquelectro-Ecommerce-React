@@ -24,6 +24,7 @@ function CartView() {
             total: totalCart(),
        }
         createBuyOrder(buyOrder);
+        clearCart();
 
     }
 if (cart.length === 0){
