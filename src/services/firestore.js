@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, getDoc, doc } from "firebase/firestore";
-
+import { collection, getDocs, getFirestore, Timestamp, getDoc, doc, addDoc } from "firebase/firestore";
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCTOg4Uyh7E5XeRd2suHnOinaw7hw3HrXM",
@@ -35,8 +35,24 @@ export async function getProd(id){
 
     const docSnapshot = await getDoc(docRef);
 
-    return docSnapshot.data();
+    return {...docSnapshot.data(), id: docSnapshot.id};
 }
+
+export async function createBuyOrder(orderData){
+    const buyTimestamp = Timestamp.now();
+    const orderWithDate = {...orderData, date: buyTimestamp};
+
+    const miColec = collection(db, "buyOrders");
+    const orderDoc = await addDoc(miColec, orderWithDate);
+
+    swal({title: "Gracias por su compra! Su ID es:", 
+          text: orderDoc.id,
+          icon: "success",
+        });
+
+}
+
+
 
 export default db;
 

@@ -9,10 +9,8 @@ const [product, setProduct] = useState()
 const { itemid } = useParams ();
 
   useEffect( () => {
-    setTimeout( () =>{
       getProd(itemid).then((data) => {     
       setProduct(data)}) 
-  }, 500)
   }, [itemid] ) ;
 
   return (

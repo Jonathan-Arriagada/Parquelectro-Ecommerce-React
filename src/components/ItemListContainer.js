@@ -10,7 +10,6 @@ const [info, setInfo] = useState([]);
 const { categoryid } = useParams ();
 
   useEffect( () => {
-    setTimeout( () =>{
       getAllProds().then((data) => {
       if (categoryid === undefined){
         setInfo(data);
@@ -19,11 +18,7 @@ const { categoryid } = useParams ();
       setInfo(itemFind)
       }
      })
-  }
-    , 500)
-   }, [categoryid] ) ;
-
-
+     }, [categoryid] ) ;
 
   return (
     <div>

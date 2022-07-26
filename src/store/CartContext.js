@@ -25,8 +25,8 @@ export function CartContextProvider ({children}) {
         else{
         const newItem = {...item, cant};
         setCart([...cart, newItem]);
-        }
-    }
+        };
+     }
     const removeFromCart = (id) => {
         const newCart = [...cart];
         const cartFilter = newCart.filter (item =>{

@@ -2,10 +2,11 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(160deg, #3d3c3c, rgba(0, 0, 0, 0.582));
+    background: linear-gradient(160deg, #000000, #242425);
     padding-top: 0rem;
     padding-bottom: 0rem;
 }
+
 .nav-links ul{
     margin: 0;
     display: flex;

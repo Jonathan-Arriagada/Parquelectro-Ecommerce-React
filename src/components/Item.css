@@ -1,12 +1,16 @@
 .container{
-    margin: 5px;
+    margin: 15px;
     display: inline-table;
     width: 250px;
 }
+.card{
+  border-radius: 30px;
+}
 
 .card:hover {
-    box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273);
+    box-shadow: 5px 10px 20px 1px black;
     transition: all 0.7s linear;
+    transform: scale(1.05);
   }
   
   .card-body {
@@ -21,8 +25,4 @@
   .card-img-top {
     transform: scale(1);
     transition: all 0.2s ease-in-out;
-  }
-  
-  .card-img-top:hover {
-    transform: scale(1.1);
-  }
+  } 
