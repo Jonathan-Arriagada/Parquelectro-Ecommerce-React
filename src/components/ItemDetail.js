@@ -12,11 +12,11 @@ const { addToCart } = useCartContext();
     addToCart(product, num);
   }  
   if (!product){
-    return  <h4>Cargando . . .</h4>
+    return  <h3 className="text-light min-vh-100">Cargando . . .</h3>
   }
   
   return (
-   <div className="container">
+   <div className="container min-vh-100">
     <div className="card text-center bg-dark">    
       <div className="card-body text-light">
       <img src={product.img} className="card-img-top" width="100" height="125"/>

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, Timestamp, getDoc, doc, addDoc } from "firebase/firestore";
+import { collection, getDocs, getFirestore, Timestamp, query, where, getDoc, doc, addDoc } from "firebase/firestore";
 import swal from "sweetalert";
 
 const firebaseConfig = {
@@ -44,15 +44,25 @@ export async function createBuyOrder(orderData){
 
     const miColec = collection(db, "buyOrders");
     const orderDoc = await addDoc(miColec, orderWithDate);
-
+    
     swal({title: "Gracias por su compra! Su ID es:", 
           text: orderDoc.id,
           icon: "success",
         });
         
 }
-
-
+export async function getProductsByCategory(categoryid){
+    const docRef = collection(db,'data');
+    const queryP = query(docRef,where("category","==",categoryid))
+    const productSnap = await getDocs(queryP)
+    
+    return productSnap.docs.map( (item) => {
+      return {
+      ...item.data(),
+      id: item.id
+      }
+  }); 
+  }
 
 export default db;
 
