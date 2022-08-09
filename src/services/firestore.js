@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { FirebaseError, initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, Timestamp, query, where, getDoc, doc, addDoc } from "firebase/firestore";
 import swal from "sweetalert";
 
@@ -15,6 +15,8 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
+// Funcion para obtener todos los productos directo de Firebase.
+
 export async function getAllProds(){
     const prodsCollectionRef = collection(db, "data");
 
@@ -29,6 +31,9 @@ export async function getAllProds(){
     });
     return dataProductos;
 }
+
+// Funcion para obtener un producto.
+
 export async function getProd(id){
     const prodsCollectionRef = collection(db, "data");
     const docRef = doc(prodsCollectionRef, id);
@@ -37,6 +42,8 @@ export async function getProd(id){
 
     return {...docSnapshot.data(), id: docSnapshot.id};
 }
+
+// Funcion para crear una collection con los datos del comprador en Firebase.
 
 export async function createBuyOrder(orderData){
     const buyTimestamp = Timestamp.now();
@@ -51,6 +58,9 @@ export async function createBuyOrder(orderData){
         });
         
 }
+
+// Funcion para mostrar productos por categoria.
+
 export async function getProductsByCategory(categoryid){
     const docRef = collection(db,'data');
     const queryP = query(docRef,where("category","==",categoryid))

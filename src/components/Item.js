@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Item.css';
 
+// Funcion para mostar la card del producto.
+
 function Item ({producto}) {
     return (
        <div className="container">

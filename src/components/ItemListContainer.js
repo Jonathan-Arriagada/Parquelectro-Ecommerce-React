@@ -3,6 +3,8 @@ import { useState,useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getAllProds, getProductsByCategory } from "../services/firestore";
 
+// Contenedor de la lista de productos.
+
 function ItemListContainer () {
 
 const [info, setInfo] = useState([]);

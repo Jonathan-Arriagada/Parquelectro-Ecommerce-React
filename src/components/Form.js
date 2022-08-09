@@ -2,6 +2,8 @@ import useCartContext from '../store/CartContext';
 import { useState } from 'react';
 import { createBuyOrder } from "../services/firestore";
 
+// Funcion para desplegar un formulario luego de comprar y finalizar la compra.
+
 function GetForm() {
     
     const { cart,clearCart, totalCart } = useCartContext();

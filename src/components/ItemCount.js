@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// Funcion para agregar o quitar cantidades al Carrito.
+
 function ItemCount(props) {
     const [num, setNum] = useState(props.initial);
     

@@ -3,6 +3,8 @@ import ItemCount from './ItemCount';
 import { Link } from "react-router-dom";
 import useCartContext from '../store/CartContext';
 
+// Funcion para mostrar el detalle del producto.
+
 function ItemDetail ({product}) {
 const [isInCart, setIsInCart] = useState(false);
 const { addToCart } = useCartContext();

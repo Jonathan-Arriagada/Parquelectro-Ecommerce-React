@@ -9,6 +9,8 @@ const { Provider } = CartContext;
 export function CartContextProvider ({children}) {
     const [cart, setCart] = useState([]);
 
+    // Funcion para agregar al carrito.
+
     const addToCart = (item, cant) => {
         if(isInCart(item.id)){
             const newCart = cart.map(cartItem => {
@@ -27,6 +29,9 @@ export function CartContextProvider ({children}) {
         setCart([...cart, newItem]);
         };
      }
+
+    //  Funcion para eliminar del carrito.
+
     const removeFromCart = (id) => {
         const newCart = [...cart];
         const cartFilter = newCart.filter (item =>{
@@ -34,13 +39,21 @@ export function CartContextProvider ({children}) {
         } )
         setCart(cartFilter);
     }
+
+    //Funcion para ver si se encuentra el producto en el carrito.
+
     const isInCart = (id) => {
         const newCart = cart.some(item =>item.id === id)
         return newCart;
     }
+
+    //Funcion para limpiar carrito.
+
     const clearCart = () => {
         return setCart([]);
     }
+
+    //Funcion para obtener la cantidad del carrito.
 
     const cantCart = () => {
         const total = cart.reduce(
@@ -48,6 +61,8 @@ export function CartContextProvider ({children}) {
         )
         return total;
     }
+
+    //Funcion para calcular total del carrito.
 
     const totalCart = () => {
         let totalFinal = cart.reduce(

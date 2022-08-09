@@ -6,6 +6,8 @@ import gh from './github.svg';
 import it from './instagram.svg';
 import './Footer.css';
 
+// Footer
+
 function Footer(){
      return (
   <footer className="bg-dark text-center text-white">

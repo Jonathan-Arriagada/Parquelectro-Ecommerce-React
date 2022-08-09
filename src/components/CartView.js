@@ -4,6 +4,8 @@ import useCartContext from '../store/CartContext';
 import GetForm from "./Form";
 
 
+// Funcion para mostrar lo seleccionado en en el Carrito.
+
 function CartView() {
     const { cart, removeFromCart, clearCart, totalCart } = useCartContext();
     const [finish, setFinish] = useState(false);
